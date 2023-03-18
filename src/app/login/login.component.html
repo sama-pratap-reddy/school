@@ -1,0 +1,10 @@
+<!-- <pre>login</pre> -->
+<form [formGroup]="login">
+<label for="">user name or email</label>
+<input type="text" placeholder="email" formControlName="email">
+<br>
+<label for="">password</label>
+<input type="password" placeholder="password" formControlName="password">
+<br>
+<button class="btn btn-primary" (click)="submit()">login</button>
+</form>

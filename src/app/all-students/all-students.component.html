@@ -1,0 +1,37 @@
+
+<table class="table table-dark">
+    <thead>
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+                <!-- <th>Father name</th> -->
+                <th>DOB</th>
+                <th>Class</th>
+                <th>Email Id</th>
+                <!-- <th>mobile</th> -->
+                <th>Address</th>
+                <!-- <th>Student type</th>  -->
+            </tr>
+    </thead>
+<tbody>
+    <tr *ngFor="let allstudent of allStudents">
+    <td>{{allstudent.firstname}}</td>
+    <td>{{allstudent.lastname}}</td>
+    <!-- <td>{{allstudent.fathername}}</td> -->
+    <td>{{allstudent.date}}</td>
+    <td>{{allstudent.email}}</td>
+    <!-- <td>{{allstudent.mobile}}</td> -->
+    <!-- <td>{{allstudent.address}}{{allstudent.area}}{{allstudent.landmark}}{{allstudent.pin}}{{allstudent.state}}</td> -->
+    <!-- <td>{{allstudent.address?.hno}}</td> -->
+    <!-- <td>{{allstudent.studenttype}}</td> -->
+    <td>
+        <button class="btn btn-warning" (click)="delete(allstudent.id)">delete</button>
+    </td>
+    </tr>
+</tbody>
+</table>
+<ul class="pagination">
+    <li *ngFor="let items of [].constructor(10);let i= index"class="page-item" (click)="page(i+1)"><a class="page-link">{{i+1}}</a></li>
+     <li class="page-item" (click)="page(2)"><a class="page-link">2</a></li>
+    <li class="page-item" (click)="page(3)"><a class="page-link">3</a></li> 
+  </ul>
